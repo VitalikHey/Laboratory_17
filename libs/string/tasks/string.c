@@ -44,11 +44,13 @@ char* findNonSpaceReverse(char *rbegin, const char *rend)  {
 }
 
 char* findSpaceReverse(char *rbegin, const char *rend) {
-    while (rbegin != rend && (*rbegin != ' ' || *rbegin == '\0')) {
+    while (rbegin >= rend) {
+        if (*rbegin == ' ') {
+            return rbegin;
+        }
         rbegin--;
     }
-
-    return rbegin;
+    return (char *)rend;
 }
 
 int strcmp(const char *lhs, const char *rhs) {
