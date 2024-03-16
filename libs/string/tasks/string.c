@@ -24,4 +24,26 @@ char* findNonSpace(char *begin) {
     return end;
 }
 
+char* findSpace(char *begin) {
+    char *end = begin;
+
+    while (*end != ' ' && *end != '\0') {
+        end++;
+    }
+    return end;
+}
+
+char* findNonSpaceReverse(char *rbegin, const char *rend)  {
+    while (rbegin != rend && (*rbegin == ' ' || *rbegin == '\0')) {
+        rbegin--;
+    }
+    return rbegin;
+}
+
+char* findSpaceReverse(char *rbegin, const char *rend) {
+    while (rbegin != rend && (*rbegin != ' ' || *rbegin == '\0')) {
+        rbegin--;
+    }
+    return rbegin;
+}
 
