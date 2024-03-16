@@ -47,3 +47,25 @@ char* findSpaceReverse(char *rbegin, const char *rend) {
     return rbegin;
 }
 
+int strcmp(const char *lhs, const char *rhs) {
+    for (; *lhs == *rhs; lhs++, rhs++) {
+        if (*lhs == '\0') return 0;
+    }
+    return *lhs - *rhs;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
